@@ -1,0 +1,9 @@
+<div class="app-container">
+    <header *ngIf="user" class="header">
+      <h1>E-Book Dashboard</h1>
+      <button mat-button (click)="logout()">Logout</button>
+    </header>
+    <main class="content">
+      <router-outlet></router-outlet>
+    </main>
+  </div>

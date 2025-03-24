@@ -1,0 +1,16 @@
+<div class="book-list-container">
+    <h2>Available E-Books</h2>
+    <ul>
+      <li *ngFor="let book of books" class="book-item">
+        <div class="book-info">
+          <h3>{{ book.title }}</h3>
+          <p><strong>Author:</strong> {{ book.author }}</p>
+          <p><strong>Category:</strong> {{ book.category }}</p>
+          <p><strong>Pages:</strong> {{ book.pages }}</p>
+          <p><strong>Reading Progress:</strong> {{ book.progress | number}}%</p>
+        </div>
+        <button mat-raised-button color="primary" (click)="openBook(book.id)">Read Now</button>
+        <button mat-raised-button color="primary">Buy Now</button>
+      </li>
+    </ul>
+  </div>

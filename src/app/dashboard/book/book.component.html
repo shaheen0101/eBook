@@ -1,0 +1,10 @@
+<div class="reader-container" *ngIf="book">
+    <h2>{{ book?.title }}</h2>
+    <p><strong>Page:</strong> {{ currentPage }} / {{ book?.pages }}</p>
+    <div class="content" *ngIf="book && book?.perPageContent">{{ bookContent }}</div>
+    <div class="navigation-buttons">
+      <button mat-raised-button color="primary" (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
+      <button mat-raised-button color="primary" (click)="nextPage()" [disabled]="currentPage === book?.pages">Next </button>
+    </div>
+    <button mat-button color="accent" (click)="goBack()"> Back to List</button>
+  </div>
